@@ -1,0 +1,17 @@
+{
+  "name": "advent",
+  "version": "1.0.0",
+  "description": "",
+  "main": "getInput.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "request": "^2.79.0",
+    "request-promise-native": "^1.0.3",
+    "yargs": "^6.5.0"
+  }
+}
