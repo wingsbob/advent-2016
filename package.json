@@ -4,12 +4,20 @@
   "description": "",
   "main": "getInput.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint adventSolutions test",
+    "test": "mocha",
     "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.11.1",
+    "eslint-config-airbnb-base": "^10.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "mocha": "^3.2.0"
+  },
+  "dependencies": {
     "request": "^2.79.0",
     "request-promise-native": "^1.0.3",
     "yargs": "^6.5.0"

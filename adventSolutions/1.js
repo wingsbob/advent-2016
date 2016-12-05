@@ -24,7 +24,7 @@ const distanceToCoOrdinates = {
   EAST: [0, 1]
 };
 
-module.exports = (input) =>
+module.exports = input =>
   input.split(',')
     .map(instruction => instruction.match(/([LR])(\d+)/).slice(1))
     .map(([turnDirection, distance], index, collection) =>
@@ -37,7 +37,8 @@ module.exports = (input) =>
     .reduce((coOrdinates, [direction, distance]) => {
       const [index, factor] = distanceToCoOrdinates[direction];
 
-      coOrdinates[index] += distance * factor;
-      return coOrdinates;
+      return coOrdinates.map((coOrd, ii) =>
+        ii === index ? coOrd + distance * factor : coOrd
+      );
     }, [0, 0])
     .reduce((totalDistance, coOrd) => totalDistance + Math.abs(coOrd), 0);
