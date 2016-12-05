@@ -1,7 +1,7 @@
 const { argv } = require('yargs');
 const getInput = require('./getInput');
 
-const adventChallenges = [1, 2].reduce((solutions, day) => {
+const adventChallenges = [1, 2, 3].reduce((solutions, day) => {
   const solution = require(`./adventSolutions/${day}`);
   const additional = {};
 
